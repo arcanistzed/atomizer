@@ -12,7 +12,7 @@ export const getFiles = source =>
     );
 
 /**
- * Validates node arguments and returns world path
+ * Verify there is a node argument and return world path
  * @param argv contents of process.argv()
  * @returns {String} path to world
  */
@@ -20,9 +20,8 @@ export function validateArgs(argv) {
   // get worldPath
   const worldPath = argv[2];
 
-  // exit if there are no arguments or if this is not a Foundry VTT Data directory
+  // exit if there are no arguments
   if (worldPath === undefined) process.exit();
-  if (!worldPath.includes("Data/worlds/")) process.exit();
 
   return worldPath;
 };
