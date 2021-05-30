@@ -6,7 +6,9 @@ A build and extract tool for FoundryVTT database files
 
 # Installation
 
-Clone this repository and then run `npm install` to install dependencies.
+Install the [npm package](https://www.npmjs.com/package/foundry-atomizer) with `npm i foundry-atomizer`.
+
+Alternatively, clone this repository and then run `npm install` to install dependencies.
 
 # Usage
 

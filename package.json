@@ -2,9 +2,8 @@
   "dependencies": {
     "line-reader": "^0.4.0"
   },
-  "name": "atomic",
+  "name": "foundry-atomizer",
   "version": "0.1.0",
-  "main": "extract.mjs",
   "devDependencies": {},
   "scripts": {},
   "author": "arcanist",
