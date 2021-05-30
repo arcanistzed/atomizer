@@ -6,9 +6,7 @@
   "version": "0.1.0",
   "main": "extract.mjs",
   "devDependencies": {},
-  "scripts": {
-    "test": "node extract.mjs /home/waternlava/Applications/FoundryBeta/foundrydata/Data/worlds/test"
-  },
+  "scripts": {},
   "author": "arcanist",
   "license": "MIT",
   "description": ""
