@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "line-reader": "^0.4.0",
+    "nedb": "^1.8.0"
+  },
+  "name": "atomic",
+  "version": "0.1.0",
+  "main": "extract.mjs",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node extract.mjs /home/waternlava/Applications/FoundryBeta/foundrydata/Data/worlds/test"
+  },
+  "author": "arcanist",
+  "license": "MIT",
+  "description": ""
+}
