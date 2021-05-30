@@ -3,7 +3,7 @@
     "line-reader": "^0.4.0"
   },
   "name": "foundry-atomizer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "devDependencies": {},
   "scripts": {},
   "author": "arcanist",
