@@ -37,7 +37,7 @@ This package is under an [MIT license](LICENSE)
 You can submit bugs via [Github Issues](https://github.com/arcanistzed/jce/issues/new/choose).
 
 # Contact me
-I can be reached on discord [@arcanist#4317](https://discord.com/users/455117777745870860) or by [email](mailto:arcanistzed@gmail.com?subject=Atomizer for Foundry VTT).
+I can be reached on discord [@arcanist#4317](https://discord.com/users/455117777745870860) or by [email](mailto:arcanistzed@gmail.com?subject=Atomizer%20for%20Foundry%20VTT).
 
 # Todo
 
