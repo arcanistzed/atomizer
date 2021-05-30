@@ -2,7 +2,7 @@
  * NOTE:
  * subDir means the "data" or "packs" folder inside our json folder
  * main dir is our json folder with all the folders named after each db
- * json directories are folders that contain entities in json format and named after a db)
+ * json directories are folders that contain entities in json format and that are named after a Foundry db file
  */
 
 import * as fs from 'fs';
@@ -22,15 +22,15 @@ subDirs.forEach(dir => {
     var subDirPath = [jsonPath, dir].join("/");
     var jsonDirs = getFiles(subDirPath)
 
-    // for each folder json directory
+    // for each json directory
     jsonDirs.forEach(json => {
         var writePath = [worldPath, dir, json].join("/") + ".db"; // get path of original db
-        var arrJSON = getFiles(subDirPath + "/" + json);
+        var arrJSON = getFiles(subDirPath + "/" + json); // get array of each JSON file in the json directory
 
         arrJSON
-            .map(path => [jsonPath, dir, json, path].join("/"))
+            .map(path => [jsonPath, dir, json, path].join("/")) // get actual path to the JSON file
             .forEach(readPath => {
-                fs.writeFileSync(writePath, fs.readFileSync(readPath) + '\n', {flag: 'a'});
+                fs.writeFileSync(writePath, fs.readFileSync(readPath) + '\n', {flag: 'a'}); // write the contents of JSON file back to the db in append mode
         });
     });
 });

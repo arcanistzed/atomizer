@@ -43,10 +43,13 @@ subDirs.forEach((dir, index) => {
 
     var readPath = [worldPath, subDirs[index], db].join("/") // get the path of all the original db files
 
-    var counter = 0;
+
+    var counter = 0; // give all files a unique "id"
+
+    // Read each line one at a time and copy the contents to a json file
     lineReader.eachLine(readPath, line => {
-      var writePath = [subDirPath, counter].join("/") + ".json";
-      fs.writeFileSync(writePath, line);
+      var writePath = [subDirPath, counter].join("/") + ".json"; // get path of json file to copy to
+      fs.writeFileSync(writePath, line); // write the current line to that file
       counter++;
     });
   })
