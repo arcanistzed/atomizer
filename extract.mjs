@@ -6,6 +6,7 @@
 
 import * as fs from 'fs';
 import lineReader from 'line-reader'
+import { toKebabCase } from './modules.mjs';
 import { validateArgs } from './modules.mjs';
 import { getFiles } from './modules.mjs'
 
@@ -41,14 +42,21 @@ subDirs.forEach((dir, index) => {
       fs.mkdirSync(subDirPath);
     };
 
-    var readPath = [worldPath, subDirs[index], db].join("/") // get the path of all the original db files
+    // get the path of all the original db files
+    var readPath = [worldPath, subDirs[index], db].join("/");
 
     // Read each line one at a time and copy the contents to a json file
     lineReader.eachLine(readPath, line => {
+      // get object
       var object = JSON.parse(line);
-      var id = [object._id, object.name].filter(Boolean).join("-");
-      var writePath = [subDirPath, id].join("/") + ".json"; // get path of json file to copy to
-      fs.writeFileSync(writePath, line); // write the current line to that file
+      // generate identifier from id and kebab case formatted name
+      var id = [object._id, toKebabCase(object.name)].filter(Boolean).join("-");
+
+      // get path of json file to copy to
+      var writePath = [subDirPath, id].join("/") + ".json";
+
+      // write the current line to that file
+      fs.writeFileSync(writePath, line);
     });
   });
 });

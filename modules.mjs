@@ -25,3 +25,15 @@ export function validateArgs(argv) {
 
   return worldPath;
 };
+
+/**
+ * Convert names to kebab case
+ * @param {string} Name to convert
+ * @returns {string} Name in kebab case
+ */
+export const toKebabCase = name =>
+  name &&
+  name
+    .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+    .map(x => x.toLowerCase())
+    .join('-');
