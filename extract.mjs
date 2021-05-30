@@ -17,8 +17,13 @@ if (!fs.existsSync(jsonPath)) {
   fs.mkdirSync(jsonPath);
 }
 
+// get sub directories that exist
+var subDirs = [];
+var inWorldPath = getFiles(worldPath);
+if (inWorldPath.includes('data')) subDirs.push('data');
+if (inWorldPath.includes('packs')) subDirs.push('packs');
+
 // create new path for each subdir if it doesn't exist
-const subDirs = ['data', 'packs'];
 subDirs.forEach((dir, index) => {
   var jsonSubDirPath = [jsonPath, dir].join("/");
   if (!fs.existsSync(jsonSubDirPath)) {
@@ -41,8 +46,8 @@ subDirs.forEach((dir, index) => {
     var counter = 0;
     lineReader.eachLine(readPath, line => {
       var writePath = [subDirPath, counter].join("/") + ".json";
-      fs.writeFileSync(writePath, JSON.stringify(JSON.parse(line), null, 4))
-      counter++
+      fs.writeFileSync(writePath, line);
+      counter++;
     });
   })
 });
