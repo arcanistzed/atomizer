@@ -3,10 +3,14 @@
     "line-reader": "^0.4.0"
   },
   "name": "foundry-atomizer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "devDependencies": {},
   "scripts": {},
   "author": "arcanist",
   "license": "MIT",
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arcanistzed/atomizer.git"
+  }
 }
