@@ -1,6 +1,6 @@
 # Atomizer
 
-![](https://img.shields.io/github/v/tag/arcanistzed/atomizer)
+![Version](https://img.shields.io/github/v/tag/arcanistzed/atomizer) ![npm tag](https://img.shields.io/npm/v/foundry-atomizer)
 
 A build and extract tool for FoundryVTT database files
 
