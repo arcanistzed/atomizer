@@ -20,8 +20,11 @@ export function validateArgs(argv) {
   // get worldPath
   const worldPath = argv[2];
 
-  // exit if there are no arguments
-  if (worldPath === undefined) process.exit();
+  // exit and alert user if there are no arguments
+  if (worldPath === undefined) {
+    console.log("invalid arguments")
+    process.exit();
+  }
 
   return worldPath;
 };
