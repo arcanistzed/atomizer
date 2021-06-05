@@ -47,8 +47,6 @@ subDirs.forEach((dir, index) => {
     // get the path of all the original db files
     var readPath = [worldPath, subDirs[index], db].join("/");
 
-    var counter = 0; // counts line number and is used to ensure that file order is the same
-
     // Read each line one at a time and copy the contents to a json file
     lineReader.eachLine(readPath, line => {
       // get object
@@ -61,9 +59,6 @@ subDirs.forEach((dir, index) => {
 
       // write the current line to that file
       fs.writeFileSync(writePath, line);
-
-      // increment counter
-      counter++;
     });
   });
 });
