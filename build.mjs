@@ -7,7 +7,7 @@
 
 import * as fs from 'fs';
 import { validateArgs } from './modules.mjs';
-import { getFiles } from './modules.mjs'
+import { getFiles } from './modules.mjs';
 
 var worldPath = validateArgs(process.argv);
 

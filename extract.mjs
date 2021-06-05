@@ -5,10 +5,11 @@
 */
 
 import * as fs from 'fs';
-import lineReader from 'line-reader'
-import { toKebabCase } from './modules.mjs';
+import lineReader from 'line-reader';
+import Datastore from 'nedb';
+
 import { validateArgs } from './modules.mjs';
-import { getFiles } from './modules.mjs'
+import { getFiles } from './modules.mjs';
 
 var worldPath = validateArgs(process.argv);
 
@@ -38,6 +39,7 @@ subDirs.forEach((dir, index) => {
   getFiles(subDirPath).forEach(db => {
     // create a new folder for each one if it doesn't already exist
     var subDirPath = [jsonPath, subDirs[index], db].join("/").replace(".db", "");
+    console.log(db)
     if (!fs.existsSync(subDirPath)) {
       fs.mkdirSync(subDirPath);
     };
@@ -52,7 +54,7 @@ subDirs.forEach((dir, index) => {
       // get object
       var object = JSON.parse(line);
       // generate identifier from id and kebab case formatted name
-      var id = [counter, toKebabCase(object.name)].filter(Boolean).join("-");
+      var id = object._id;
 
       // get path of json file to copy to
       var writePath = [subDirPath, id].join("/") + ".json";
