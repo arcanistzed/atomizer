@@ -13,11 +13,14 @@ import { getFiles } from './modules.mjs';
 
 var worldPath = validateArgs(process.argv);
 
-// create new path for main dir if it doesn't exist
+// if main dir exists, delete it
 var jsonPath = worldPath + "/json";
-if (!fs.existsSync(jsonPath)) {
-  fs.mkdirSync(jsonPath);
+if (fs.existsSync(jsonPath)) {
+  fs.rmdirSync(jsonPath, { recursive: true });
 }
+
+// create new empty directory for main directory
+fs.mkdirSync(jsonPath);
 
 // get sub directories that exist
 var subDirs = [];
@@ -51,8 +54,10 @@ subDirs.forEach((dir, index) => {
 
     // Read each line one at a time and copy the contents to a json file
     lineReader.eachLine(readPath, line => {
+
       // get object
       var object = JSON.parse(line);
+
       // generate identifier from id and kebab case formatted name
       var id = object._id;
 
