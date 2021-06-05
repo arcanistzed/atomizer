@@ -5,9 +5,6 @@
   "name": "foundry-atomizer",
   "version": "0.1.4",
   "devDependencies": {},
-  "scripts": {
-    "install": "install.mjs"
-  },
   "author": "arcanist",
   "license": "MIT",
   "description": "",
