@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "line-reader": "^0.4.0"
+    "line-reader": "^0.4.0",
+    "nedb": "^1.8.0"
   },
   "name": "foundry-atomizer",
   "version": "0.1.4",
