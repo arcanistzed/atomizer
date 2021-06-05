@@ -39,13 +39,15 @@ subDirs.forEach((dir, index) => {
   getFiles(subDirPath).forEach(db => {
     // create a new folder for each one if it doesn't already exist
     var subDirPath = [jsonPath, subDirs[index], db].join("/").replace(".db", "");
-    console.log(db)
     if (!fs.existsSync(subDirPath)) {
       fs.mkdirSync(subDirPath);
     };
 
     // get the path of all the original db files
     var readPath = [worldPath, subDirs[index], db].join("/");
+    
+    // Compact database files by initializing them with nedb
+    new Datastore({ filename: readPath, autoload: true });
 
     // Read each line one at a time and copy the contents to a json file
     lineReader.eachLine(readPath, line => {
