@@ -9,23 +9,23 @@ import * as fs from 'fs';
 import { validateArgs } from './modules.mjs';
 import { getFiles } from './modules.mjs';
 
-var worldPath = validateArgs(process.argv);
+const worldPath = validateArgs(process.argv);
 
 // get all subdirectories of main directory
-var jsonPath = worldPath + "/json";
+const jsonPath = worldPath + "/json";
 const subDirs = getFiles(jsonPath);
 
 // for each subdirectory (data, packs)
 subDirs.forEach(dir => {
 
     // get array of json directories
-    var subDirPath = [jsonPath, dir].join("/");
-    var jsonDirs = getFiles(subDirPath)
+    let subDirPath = [jsonPath, dir].join("/");
+    let jsonDirs = getFiles(subDirPath)
 
     // for each json directory
     jsonDirs.forEach(json => {
-        var writePath = [worldPath, dir, json].join("/") + ".db"; // get path of original db
-        var arrJSON = getFiles(subDirPath + "/" + json); // get array of each JSON file in the json directory
+        let writePath = [worldPath, dir, json].join("/") + ".db"; // get path of original db
+        let arrJSON = getFiles(subDirPath + "/" + json); // get array of each JSON file in the json directory
 
         arrJSON
             .map(path => [jsonPath, dir, json, path].join("/")) // get actual path to the JSON file
