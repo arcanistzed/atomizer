@@ -2,7 +2,7 @@
 
 ![Version](https://img.shields.io/github/v/tag/arcanistzed/atomizer) ![npm tag](https://img.shields.io/npm/v/foundry-atomizer)
 
-A build and extract tool for FoundryVTT database files
+A build and extract tool for FoundryVTT database files. This project is no longer in active development.
 
 ## Installation
 
