@@ -46,8 +46,4 @@ You can submit bugs via [Github Issues](https://github.com/arcanistzed/atomizer/
 
 ## Contact me
 
-Come hang out on my [my Discord server](https://discord.gg/AAkZWWqVav) or [click here to send me an email](mailto:arcanistzed@gmail.com?subject=atomizer%20module%20for%20Foundry%20VTT).
-
-## Todo
-
-Add support for arrays within entities (embedded documents?)
+Come hang out on my [my Discord server](https://discord.gg/AAkZWWqVav) or [click here to send me an email](mailto:arcanistzed@gmail.com?subject=Atomizer%20for%20Foundry%20VTT).
