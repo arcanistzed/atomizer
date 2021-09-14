@@ -1,6 +1,6 @@
 # Atomizer
 
-![Version](https://img.shields.io/github/v/tag/arcanistzed/atomizer) ![npm tag](https://img.shields.io/npm/v/foundry-atomizer)
+![Version](https://img.shields.io/github/v/tag/arcanistzed/atomizer?style=flat-square) ![npm tag](https://img.shields.io/npm/v/foundry-atomizer?style=flat-square) [![Discord Server](https://img.shields.io/badge/-Discord-%232c2f33?style=flat-square&logo=discord)](https://discord.gg/AAkZWWqVav) [![Patreon](https://img.shields.io/badge/-Patreon-%23141518?style=flat-square&logo=patreon)](https://www.patreon.com/bePatron?u=15896855)
 
 A build and extract tool for FoundryVTT database files. This project is no longer in active development.
 
