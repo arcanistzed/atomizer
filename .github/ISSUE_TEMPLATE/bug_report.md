@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Create a report to help improve the package
 title: "[BUG]"
 labels: bug
 assignees: arcanistzed
@@ -25,8 +25,9 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Details**
-Foundry VTT version:
-Module version:
+Package version:
+Node version:
+Operating System:
 
 **Additional context**
 Add any other context about the problem here.
