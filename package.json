@@ -5,7 +5,9 @@
   },
   "name": "foundry-atomizer",
   "version": "0.1.6",
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/nedb": "^1.8.12"
+  },
   "author": "arcanist",
   "license": "MIT",
   "description": "",
