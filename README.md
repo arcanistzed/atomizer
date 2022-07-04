@@ -34,6 +34,16 @@ node build.mjs <path to foundry world>
 node build.mjs <path to foundry module>
 ```
 
+### sort
+
+This script sorts the order of the entries in a given database file by their ID.
+
+To use this script navigate to the directory where you have atomizer installed and run this command:
+
+```sh
+node sort.mjs <path to database file>
+```
+
 ## License
 
 Copyright © 2021 arcanist
